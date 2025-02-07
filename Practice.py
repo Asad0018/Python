@@ -78,13 +78,13 @@ def max(*args):
 def sort(*args):
     l1 = list(args)
     l2 = []
-    for j in range(len(l1)):
+    while l1:
         iMin = 0
         for i in range(len(l1)):
             if l1[i] < l1[iMin]:
                 iMin = i
         l2.append(l1[iMin])
-        l1[iMin] = float('inf')
+        del l1[iMin]
     return l2
 
 # Average:
